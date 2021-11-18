@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Link from "next/link";
 
 const HeroContainer = styled.div`
   height: 100vh;
@@ -10,6 +11,7 @@ const HeroContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: calibri, sans-serif;
 `;
 
 const HeroBG = styled.img`
@@ -31,7 +33,6 @@ const HeroHeader = styled.div`
   flex-direction: column;
   font-weight: bold;
   font-size: 2em;
-  font-family: "Open Sans", sans-serif;
   color: rgb(73, 122, 235);
   margin-top: 10rem;
   box-shadow: 2.25px 2.25px 2.25px 2.25px lightgray;
@@ -42,7 +43,8 @@ const HeroTitle = styled.h4`
 `;
 
 const HeroP = styled.p`
-  color: white  font-size: 0.75em;
+  color: white;
+  font-size: 0.75em;
 `;
 
 const ButtonContainer = styled.div`
@@ -52,7 +54,6 @@ const ButtonContainer = styled.div`
   align-items: baseline;
   width: 65%;
   bottom: 0;
-  font-family: "Open Sans", sans-serif;
 `;
 
 const HelperDiv = styled.div`
@@ -67,7 +68,7 @@ const LogInButton = styled.button`
   border: none;
   cursor: pointer;
   font-size: 1.5em;
-  box-shadow: 2.25px 2.25px 2.25px 2.25px lightgray;
+  box-shadow: 1.25px 2.25px 2.25px 2.25px lightgray;
 `;
 
 const SportsBookButton = styled.button`
@@ -78,7 +79,7 @@ const SportsBookButton = styled.button`
   border: none;
   cursor: pointer;
   font-size: 1.5em;
-  box-shadow: 2.25px 2.25px 2.25px 2.25px rgb(213, 106, 237);
+  box-shadow: 1.25px 2.25px 2.25px 2.25px rgb(213, 106, 237);
 `;
 
 export default function Hero() {
@@ -94,12 +95,16 @@ export default function Hero() {
       </HeroHeader>
       <HelperDiv />
       <ButtonContainer>
-        <LogInButton data-aos="fade-up" data-aos-once="true">
-          Log In
-        </LogInButton>
-        <SportsBookButton data-aos="fade-up" data-aos-once="true">
-          Sports Book
-        </SportsBookButton>
+        <Link href={{ pathname: "/LogIn" }} passHref>
+          <LogInButton data-aos="fade-up" data-aos-once="true">
+            Log In
+          </LogInButton>
+        </Link>
+        <Link href={{ pathname: "/SportsBook" }} passHref>
+          <SportsBookButton data-aos="fade-up" data-aos-once="true">
+            Sports Book
+          </SportsBookButton>
+        </Link>
       </ButtonContainer>
     </HeroContainer>
   );

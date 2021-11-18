@@ -24,7 +24,7 @@ const ReasonContainer = styled.div`
   justify-content: space-between;
   height: 30rem;
   width: 50rem;
-  margin-top: 2.5rem;
+  margin-top: 3.5rem;
   div:hover {
     background-color: rgb(249, 222, 251);
     box-shadow: 2.25px 2.25px 2.25px 2.25px lightgray;
