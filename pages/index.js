@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Aos from "aos";
 import "aos/dist/aos.css";
 import Hero from "../Components/Hero";
 import About from "../Components/About";
@@ -12,7 +13,6 @@ const Container = styled.div`
   left: 0;
   display: flex;
   flex-direction: column;
-  flex: 1;
 `;
 
 export default function Home() {
