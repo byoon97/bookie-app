@@ -62,7 +62,7 @@ const HelperDiv = styled.div`
 function Nav() {
   return (
     <Container>
-      <Logo src="Motive Logo.png" />
+      <Logo src="../../Motive Logo.png" />
       <ButtonSet1>
         <HomeButton>Home</HomeButton>
         <MyBetButton>My Bets</MyBetButton>

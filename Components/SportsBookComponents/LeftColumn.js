@@ -62,7 +62,7 @@ function LeftColumn(props) {
           return (
             <Link
               href={{
-                pathname: `/sport/` + sport,
+                pathname: `/sportbook/` + sport,
               }}
               passHref
               key={sport}
